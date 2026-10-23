@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "seed": 20261022,
+  "mlflow": "2.22.2",
+  "runs": [
+    {
+      "model": "Logistica",
+      "run_id": "e5e4c5b65b264862a3ed291c6f9de925"
+    },
+    {
+      "model": "SVM_calibrada",
+      "run_id": "43e834e14e7b4ae7b7b387ef8cca63ca"
+    }
+  ]
+}

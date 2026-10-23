@@ -1,0 +1,25 @@
+{
+  "type": "SIMULACION DIDACTICA",
+  "unit": "cliente ficticio; una revisión por cliente",
+  "primary": "proporción de revisiones completas en 48 h",
+  "hypotheses": "H0: pB=pA; H1: pB!=pA",
+  "assumed_pA": 0.72,
+  "assumed_pB": 0.85,
+  "nA": 75,
+  "nB": 75,
+  "successA": 48,
+  "successB": 59,
+  "rateA": 0.64,
+  "rateB": 0.7866666666666666,
+  "delta": 0.1466666666666666,
+  "ci95_wilson_bonferroni_approx": [
+    -0.08734018023202705,
+    0.36225809597163217
+  ],
+  "fisher_exact_p": 0.07031708606068482,
+  "alpha": 0.05,
+  "power_target": 0.8,
+  "approx_n_per_arm": 156,
+  "n_with_10pct_loss": 174,
+  "interpretation": "Demuestra el procedimiento, no prueba efecto causal real. El diseño final requiere evaluar contaminación entre asesores y efecto de agrupación."
+}

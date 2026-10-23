@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "seed": 20261015,
+  "original_rows": 2264,
+  "invalid_rows": 0,
+  "conflict_rows": 0,
+  "duplicate_rows_removed": 5,
+  "clean_rows": 2259,
+  "train_rows": 1807,
+  "test_rows": 452,
+  "class_counts": {
+    "neutral": 1386,
+    "positive": 570,
+    "negative": 303
+  },
+  "original_sha256": "5fb370b3005b9a2759f708849a691ad2e4d2593d4c995c1afde229398a516594",
+  "clean_sha256": "aa5406dbc8cca84a54c2663995a607023a5fc685ea9d2e057dedaeda90707bba",
+  "normalization": "Latin-1; NFKC; whitespace collapse; casefold duplicate key only; no translation or sentiment imputation"
+}

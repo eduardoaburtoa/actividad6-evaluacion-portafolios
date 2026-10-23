@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+mlflow.db*
+mlartifacts/
+resultados/fichas_temporales/
+.streamlit/secrets.toml
+
+mlflow_evidencia/

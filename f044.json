@@ -1,0 +1,32 @@
+{
+  "selected_by_nested_cv_cost": "SVM_calibrada",
+  "thresholds": {
+    "Logistica": {
+      "threshold": 0.125,
+      "feasible_dev": false
+    },
+    "SVM_calibrada": {
+      "threshold": 0.2,
+      "feasible_dev": false
+    }
+  },
+  "bootstrap_repeats": 2000,
+  "auc_ci95": [
+    0.9284296255922183,
+    0.9761435579220997
+  ],
+  "f1_ci95": [
+    0.6715328467153284,
+    0.8120300751879699
+  ],
+  "delta_recall_ci95": [
+    0.08196721311475408,
+    0.2786885245901639
+  ],
+  "mcnemar_discordant": [
+    18,
+    11
+  ],
+  "mcnemar_exact_p": 0.26493089646101,
+  "warning": "Test histórico ya examinado en Actividad5; evaluación retrospectiva. IC condicionales al test, no prueba externa prospectiva."
+}

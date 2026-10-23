@@ -1,0 +1,174 @@
+[
+  {
+    "run_id": "77cc3688d7c24142b7ec42a0e8a1e19f",
+    "name": "Logistica",
+    "status": "FINISHED",
+    "params": {
+      "seed": "20261022",
+      "positive": "negative",
+      "C": "1",
+      "ngram": "1,2",
+      "outer_folds": "5",
+      "inner_threshold_folds": "3",
+      "calibration": "none",
+      "threshold": "0.125",
+      "cost_fn": "5",
+      "cost_fp": "1",
+      "source_commit": "ffcab30094541ebbe7f52f1c55062068d59e1e4f",
+      "data_sha256": "aa5406dbc8cca84a54c2663995a607023a5fc685ea9d2e057dedaeda90707bba",
+      "code_sha256": "55dac9819b48313a1b36afd8c495cde304434664b57f8ecd097af3c6a89724ed"
+    },
+    "metrics": {
+      "accuracy": 0.8053097345132744,
+      "precision": 0.3969465648854962,
+      "recall": 0.8524590163934426,
+      "f1": 0.5416666666666666,
+      "auc": 0.9223931910611713,
+      "average_precision": 0.7310495295376286,
+      "tn": 312.0,
+      "fp": 79.0,
+      "fn": 9.0,
+      "tp": 52.0,
+      "cost_per_100": 27.43362831858407,
+      "review_rate": 0.28982300884955753,
+      "fit_seconds": 1.4625896671786904
+    }
+  },
+  {
+    "run_id": "d5d691ecf4ef45d987f8ac9dd03099a3",
+    "name": "SVM_calibrada",
+    "status": "FINISHED",
+    "params": {
+      "seed": "20261022",
+      "positive": "negative",
+      "C": "1",
+      "ngram": "1,2",
+      "outer_folds": "5",
+      "inner_threshold_folds": "3",
+      "calibration": "sigmoid 3 folds",
+      "threshold": "0.2",
+      "cost_fn": "5",
+      "cost_fp": "1",
+      "source_commit": "ffcab30094541ebbe7f52f1c55062068d59e1e4f",
+      "data_sha256": "aa5406dbc8cca84a54c2663995a607023a5fc685ea9d2e057dedaeda90707bba",
+      "code_sha256": "55dac9819b48313a1b36afd8c495cde304434664b57f8ecd097af3c6a89724ed"
+    },
+    "metrics": {
+      "accuracy": 0.922566371681416,
+      "precision": 0.6710526315789473,
+      "recall": 0.8360655737704918,
+      "f1": 0.7445255474452555,
+      "auc": 0.9547608066747725,
+      "average_precision": 0.8468291477422032,
+      "tn": 366.0,
+      "fp": 25.0,
+      "fn": 10.0,
+      "tp": 51.0,
+      "cost_per_100": 16.5929203539823,
+      "review_rate": 0.168141592920354,
+      "fit_seconds": 2.3592975419014692
+    }
+  },
+  {
+    "run_id": "5051bfbadc70414ba9a544b7eceb401c",
+    "name": "Validacion_y_AB_SIMULADO",
+    "status": "FINISHED",
+    "params": {
+      "selected": "SVM_calibrada",
+      "ab": "SIMULADO",
+      "ab_seed": "20261022",
+      "threshold": "0.2"
+    },
+    "metrics": {
+      "ab_fisher_p": 0.07031708606068482,
+      "mcnemar_p": 0.26493089646101
+    }
+  },
+  {
+    "run_id": "e5e4c5b65b264862a3ed291c6f9de925",
+    "name": "Logistica",
+    "status": "FINISHED",
+    "params": {
+      "seed": "20261022",
+      "positive": "negative",
+      "C": "1",
+      "ngram": "1,2",
+      "outer_folds": "5",
+      "inner_threshold_folds": "3",
+      "solver": "liblinear",
+      "calibration": "none",
+      "threshold": "0.125",
+      "cost_fn": "5",
+      "cost_fp": "1",
+      "source_commit": "ffcab30094541ebbe7f52f1c55062068d59e1e4f",
+      "data_sha256": "aa5406dbc8cca84a54c2663995a607023a5fc685ea9d2e057dedaeda90707bba",
+      "code_sha256": "4084da16ebe2f67af618f78beab450d040aa968c418ce7d37e759fbe9d95a32f"
+    },
+    "metrics": {
+      "accuracy": 0.8053097345132744,
+      "precision": 0.3969465648854962,
+      "recall": 0.8524590163934426,
+      "f1": 0.5416666666666666,
+      "auc": 0.9228963146199322,
+      "average_precision": 0.7329494647732328,
+      "tn": 312.0,
+      "fp": 79.0,
+      "fn": 9.0,
+      "tp": 52.0,
+      "cost_per_100": 27.43362831858407,
+      "review_rate": 0.28982300884955753,
+      "fit_seconds": 1.2686221655458212
+    }
+  },
+  {
+    "run_id": "43e834e14e7b4ae7b7b387ef8cca63ca",
+    "name": "SVM_calibrada",
+    "status": "FINISHED",
+    "params": {
+      "seed": "20261022",
+      "positive": "negative",
+      "C": "1",
+      "ngram": "1,2",
+      "outer_folds": "5",
+      "inner_threshold_folds": "3",
+      "solver": "liblinear SVC",
+      "calibration": "sigmoid 3 folds",
+      "threshold": "0.2",
+      "cost_fn": "5",
+      "cost_fp": "1",
+      "source_commit": "ffcab30094541ebbe7f52f1c55062068d59e1e4f",
+      "data_sha256": "aa5406dbc8cca84a54c2663995a607023a5fc685ea9d2e057dedaeda90707bba",
+      "code_sha256": "4084da16ebe2f67af618f78beab450d040aa968c418ce7d37e759fbe9d95a32f"
+    },
+    "metrics": {
+      "accuracy": 0.922566371681416,
+      "precision": 0.6710526315789473,
+      "recall": 0.8360655737704918,
+      "f1": 0.7445255474452555,
+      "auc": 0.9547608066747725,
+      "average_precision": 0.8468291477422032,
+      "tn": 366.0,
+      "fp": 25.0,
+      "fn": 10.0,
+      "tp": 51.0,
+      "cost_per_100": 16.5929203539823,
+      "review_rate": 0.168141592920354,
+      "fit_seconds": 2.5234017092734575
+    }
+  },
+  {
+    "run_id": "77fb4ff5c5234de5a7f5679fca01dc38",
+    "name": "Validacion_y_AB_SIMULADO",
+    "status": "FINISHED",
+    "params": {
+      "selected": "SVM_calibrada",
+      "ab": "SIMULADO",
+      "ab_seed": "20261022",
+      "threshold": "0.2"
+    },
+    "metrics": {
+      "ab_fisher_p": 0.07031708606068482,
+      "mcnemar_p": 0.26493089646101
+    }
+  }
+]
