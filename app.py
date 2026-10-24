@@ -19,12 +19,15 @@ with tabs[0]:
  st.subheader('Comparación que sí podemos sostener')
  st.write('Seleccioné SVM por menor costo medio en validación cruzada anidada: 5 unidades por omisión y 1 por falsa alerta. Son ponderaciones didácticas, no pérdidas monetarias.')
  st.dataframe(m,hide_index=True)
- st.image(str(R/'resultados/roc.png'))
+ st.image(str(R/'resultados/roc_pr.png'))
+ st.image(str(R/'resultados/fiabilidad.png'))
+ st.caption('Brier SVM 0.0463 frente a logística 0.0740; la media global no acredita calibración perfecta por segmento.')
  st.caption('Test histórico de 452 noticias ya utilizado en Actividad 5. Esta evaluación es retrospectiva; no acredita generalización a noticias mexicanas actuales.')
 with tabs[1]:
  st.image(str(R/'resultados/confusion.png'))
  st.write('Con umbral 0.20, las omisiones bajan de 21 a 10 y las falsas alertas suben de 7 a 25. Se revisan 76 noticias frente a 47. El cambio requiere capacidad operativa.')
  st.image(str(R/'resultados/umbral.png'))
+ st.dataframe(pd.read_csv(R/'resultados/escenarios_umbral.csv'),hide_index=True)
  st.subheader('Explorador posterior al experimento')
  t=st.slider('Umbral ilustrativo sobre test (no cambia el modelo publicado)',0.05,0.95,0.20,0.025)
  pred=p.SVM_calibrada>=t
@@ -33,7 +36,9 @@ with tabs[1]:
 with tabs[2]:
  st.dataframe(pd.read_csv(R/'resultados/validacion_cruzada.csv'),hide_index=True)
  st.write(f"AUC: IC bootstrap 95 % {s['auc_ci95'][0]:.3f}–{s['auc_ci95'][1]:.3f}. McNemar de exactitud: p={s['mcnemar_exact_p']:.4f}; no demuestra mejora de exactitud.")
+ st.write('ΔAUC SVM−logística 0.0319; IC95 % [0.0206, 0.0451]. McNemar entre modelos p≈3.1×10⁻¹⁵. Contrastes exploratorios sobre test histórico.')
  st.image(str(R/'resultados/ab.png'))
+ st.caption('A/B simulado: potencia normal aproximada 0.49 bajo efecto supuesto de 13 puntos; MDE 17.84 puntos. No significancia no demuestra ausencia de efecto.')
  st.write(f"A/B SIMULADO: 48/75 revisiones completas en A y 59/75 en B. Diferencia 14.67 puntos; Fisher bilateral p={ab['fisher_exact_p']:.4f}. No significativo al 5 %, y no constituye evidencia causal real.")
  st.caption('CV mide desempeño predictivo bajo remuestreo. A/B prospectivo mediría impacto del flujo de trabajo con asignación aleatoria. Son preguntas distintas.')
 with tabs[3]:

@@ -8,12 +8,16 @@ Mi prioridad como Banquero Patrimonial Sr. es preparar revisiones que cuiden el 
 
 > **Segunda revisión · 23 de octubre:** corregí una incompatibilidad de instalación de MLflow y reproduje el entrenamiento completo en un entorno nuevo. [Revisión y cotejo de rúbrica](documentos/Revision_2.md) · [Pruebas de reproducción](resultados/reproduccion_revision2.json) · [Auditoría](resultados/auditoria_revision2.json).
 
+[![Validación reproducible](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/workflows/validacion.yml/badge.svg)](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/workflows/validacion.yml)
+
+**Versión 1.1.0:** reporte integrado con ocho páginas de contenido más portada y declaración; cuaderno ejecutado con código y salidas visibles; curvas PR y fiabilidad; pruebas automatizadas. [Verificación de mejoras](documentos/Verificacion_110.md).
+
 ## Empieza aquí
 
 | Quiero… | Acceso directo |
 |---|---|
-| Leer la entrega de ocho páginas | [Reporte PDF](documentos/Actividad6_Eduardo_Aburto.pdf) · [Word](documentos/Actividad6_Eduardo_Aburto.docx) |
-| Editar el reporte en Google | [Google Docs editable para el propietario](https://docs.google.com/document/d/1iSBlPG3uCCOoK02nPwPb33fWbSOUuntV_1oht4yMtNs/edit) |
+| Leer la entrega integrada de diez páginas | [Reporte PDF](documentos/Actividad6_Eduardo_Aburto.pdf) · [Word](documentos/Actividad6_Eduardo_Aburto.docx) |
+| Editar el reporte en Google | [Google Docs 1.1.0 · acceso restringido al propietario](https://docs.google.com/document/d/1_dCmO0TBiL1HvV-EilfEwqv0tQQo1tv0OxPz-L4A8c8/edit) |
 | Revisar el tablero solicitado | [Trello](https://trello.com/b/2TN8TJQ1) · [Capturas en PDF sin necesidad de acceso a Trello](tablero/Evidencia_Trello.pdf) |
 | Explorar resultados y costos | [Aplicación Streamlit](app.py) · [Cómo abrirla](#abrir-streamlit) |
 | Ejecutar en Google Colab | [Abrir notebook](https://colab.research.google.com/github/eduardoaburtoa/actividad6-evaluacion-portafolios/blob/main/fuentes/entrena.ipynb) |
@@ -49,6 +53,26 @@ Bajar el umbral reduce omisiones de **21 a 10**, pero aumenta falsas alertas de 
 - **Incertidumbre:** bootstrap estratificado pareado de 2,000 repeticiones. IC95 % AUC SVM [0.9284, 0.9761]. McNemar de exactitud entre umbrales p=0.2649: no demuestra mejora de exactitud. Los folds no son observaciones independientes.
 
 La segunda revisión incorpora una **comparación exploratoria pareada entre algoritmos**: ΔAUC SVM−logística = 0.03186 (IC95 % [0.01987, 0.04570]) y ΔF1 = 0.20286 ([0.15107, 0.25334]). Es distinta del McNemar entre umbrales anterior. [Método, significancia y límites](documentos/Revision_2.md#comparación-estadística-adicional) · [Resultados completos](resultados/comparacion_pareada.json).
+
+## Ampliación 1.1.0 con cálculos verificables
+
+[Script completo](fuentes/ampliacion.py) · [Resultados exactos](resultados/ampliacion.json) · [Escenarios CSV](resultados/escenarios_umbral.csv).
+
+- **ΔAUC SVM−logística:** 0.0319; IC95 % [0.0206, 0.0451], bootstrap pareado de 2,000 repeticiones, semilla 20261022. Este protocolo se distingue del anexo previo de 5,000 repeticiones. La cola empírica corregida es 0.0009995; no se presenta como prueba nula centrada.
+- **McNemar entre modelos:** 54 aciertos sólo SVM frente a 1 sólo logística; p≈3.1×10⁻¹⁵. Análisis exploratorios del test retrospectivo, sin corrección por multiplicidad ni validación externa nueva.
+- **Brier:** SVM 0.0463, logística 0.0740. Probabilidad media SVM 0.1365 frente a prevalencia 0.1350: evidencia favorable, no calibración perfecta demostrada.
+- **Potencia A/B simulada:** aproximación normal bilateral 0.4911 bajo efecto supuesto de 13 puntos y 75 por brazo. MDE 17.84 puntos, 17.9 al redondear conservadoramente hacia arriba. No significancia no prueba ausencia de efecto ni permite atribuirla exclusivamente a la muestra.
+
+| Umbral SVM | Recall | Precisión | F1 | FN | FP | Revisiones | Costo/100 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| 0.075 · escenario recall | 0.9016 | 0.4435 | 0.5946 | 6 | 69 | 124 | 21.90 |
+| **0.20 · política conservada** | **0.8361** | **0.6711** | **0.7445** | **10** | **25** | **76** | **16.59** |
+| 0.50 · escenario precisión | 0.6557 | 0.8511 | 0.7407 | 21 | 7 | 47 | 24.78 |
+
+El umbral 0.075 alcanza recall de 90 %, pero no precisión de 60 %. La meta conjunta no se alcanza en la rejilla de desarrollo. No se reseleccionó con el test. Costo ponderado = 5FN+FP; no son pesos.
+
+![ROC y precisión recall](resultados/roc_pr.png)
+![Fiabilidad](resultados/fiabilidad.png)
 
 ## A/B simulado y negocio
 
@@ -89,7 +113,7 @@ La [segunda revisión](documentos/Revision_2.md) documenta la reproducción de m
 streamlit run app.py
 ```
 
-Cinco pestañas: resultados, umbral y errores, validación y A/B, cartera didáctica, fuentes y trazabilidad. El explorador del umbral sobre test está identificado como ilustrativo y no modifica el umbral publicado. La aplicación se comprobó con Streamlit AppTest.
+Cinco pestañas: resultados, umbral y errores, validación y A/B, cartera didáctica, fuentes y trazabilidad. El explorador del umbral sobre test está identificado como ilustrativo y no modifica el umbral publicado. La aplicación se comprobó con Streamlit AppTest; el código verificable está en [pruebas/test_app.py](pruebas/test_app.py).
 
 ### Ver MLflow sin volver a entrenar
 
@@ -135,3 +159,19 @@ Actividad6 (raíz del repositorio)
 - Temas 13 y 14 y rúbrica Actividad 6 proporcionados por el curso; se consultaron sin redistribuir material docente.
 
 Trabajo académico personal. Identidad Vértice AI y paleta azul solicitada; no constituye un producto oficial ni una recomendación institucional de BBVA.
+
+## Comprobar la versión 1.1.0
+
+```bash
+pip install -r requirements-dev.txt
+python fuentes/verificar.py
+python fuentes/auditoria.py
+python -m pytest pruebas -q
+python -m fuentes.ampliacion
+```
+
+Para reentrenar con la configuración original: `python fuentes/experimento.py`. Para leer ejecución y salidas guardadas abre [entrena.ipynb](fuentes/entrena.ipynb); sus 14 celdas de código fueron ejecutadas localmente. La sesión de Google Colab no se ejecutó aquí.
+
+[Pruebas de esta iteración](resultados/verificacion_110.json). La reproducción propia comprobada es macOS ARM con Python 3.12.14; la auditoría externa comunicada por el autor refiere resultados idénticos en Linux con Python 3.13, scikit-learn 1.9.1 y MLflow 3.17.2. Sin logs adjuntos no se presenta como verificación independiente de esta revisión. El CI prueba métricas y aplicación en Ubuntu; no reentrena ni acredita esas versiones externas.
+
+[Referencias académicas](documentos/Referencias.md) · [Aviso de derechos y alcance](AVISO.md).

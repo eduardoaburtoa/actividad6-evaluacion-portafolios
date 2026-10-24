@@ -1,0 +1,28 @@
+{
+  "scope": "Exploratorio; test retrospectivo; sin ajuste por multiplicidad ni incertidumbre de reentrenamiento",
+  "seed": 20261022,
+  "bootstrap_repeats": 2000,
+  "delta_auc": 0.03186449205484032,
+  "delta_auc_ci95": [
+    0.02062492138694384,
+    0.045116556957779476
+  ],
+  "bootstrap_two_sided_tail_plus1": 0.0009995002498750624,
+  "bootstrap_tail_interpretation": "Proporción de cola empírica corregida; no p-valor de una distribución nula centrada.",
+  "mcnemar_models": {
+    "svm_only_correct": 54,
+    "logistic_only_correct": 1,
+    "p": 3.1086244689504383e-15
+  },
+  "brier": {
+    "SVM": 0.04625674670670211,
+    "Logistica": 0.0740138789024259
+  },
+  "mean_probability_svm": 0.13653981420617786,
+  "prevalence": 0.13495575221238937,
+  "ab_design": {
+    "method": "Aproximación normal bilateral; pA=.72; n=75 por brazo; alpha=.05; no potencia exacta de Fisher",
+    "power_assumed_delta_0_13": 0.49107804394614196,
+    "mde_power_0_8": 0.17836245741334647
+  }
+}

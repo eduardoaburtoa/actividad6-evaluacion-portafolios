@@ -6,3 +6,7 @@ resultados/fichas_temporales/
 .streamlit/secrets.toml
 
 mlflow_evidencia/
+
+.pytest_cache/
+.cache-matplotlib/
+.ipynb_checkpoints/

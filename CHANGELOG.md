@@ -1,5 +1,13 @@
 # Historial de la Actividad 6
 
+## 1.1.0 · 24 de octubre de 2026
+- Integra resumen ejecutivo, SMART de cinco filas, escenarios, referencias y cobertura de rúbrica en el reporte.
+- Añade PR, fiabilidad, Brier, ΔAUC pareado, McNemar entre modelos y potencia normal aproximada del A/B simulado.
+- Cuaderno con código visible y 14 celdas de código ejecutadas; métricas y predicciones coinciden con el experimento original.
+- Añade pruebas pytest de métricas y Streamlit, workflow GitHub Actions y aviso académico.
+- Conserva semillas, hiperparámetros, partición, script original y las limitaciones del caso.
+- Actualiza el enlace al Google Docs 1.1.0; permisos y tablero se documentan en la verificación de mejoras.
+
 ## 1.0.1 · 23 de octubre de 2026
 - Segunda revisión contra los cuatro criterios de la rúbrica; anexo `documentos/Revision_2.md`.
 - Corrige incompatibilidad MLflow/SQLAlchemy detectada en instalación limpia; añade bloqueo completo de versiones.
