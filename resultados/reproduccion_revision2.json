@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-23",
+  "python": "3.12.14",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "clean_virtual_environment": true,
+  "full_training_exit_code": 0,
+  "dependency_fix": "SQLAlchemy==2.0.40",
+  "pip_check": "No broken requirements found.",
+  "comparisons": {
+    "ab_simulado.csv": {
+      "rows": 150,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "metricas_test.csv": {
+      "rows": 6,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "predicciones_cv.csv": {
+      "rows": 3614,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "predicciones_test.csv": {
+      "rows": 452,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "resumen_cv.csv": {
+      "rows": 4,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "roc_Logistica.csv": {
+      "rows": 64,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "roc_SVM_calibrada.csv": {
+      "rows": 46,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "umbrales_Logistica_desarrollo.csv": {
+      "rows": 37,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "umbrales_SVM_calibrada_desarrollo.csv": {
+      "rows": 37,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "validacion_cruzada.csv": {
+      "rows": 10,
+      "match": true,
+      "tolerance": 1e-12
+    },
+    "estadistica.json": {
+      "match": true
+    },
+    "ab_analisis.json": {
+      "match": true
+    }
+  },
+  "fresh_mlflow": {
+    "finished_runs": 3,
+    "metric_records": 28,
+    "parameter_records": 32
+  },
+  "streamlit_apptest": {
+    "startup_tabs": 5,
+    "threshold_0_5": "passed",
+    "amount_5000000": "passed",
+    "horizon_24": "passed",
+    "exceptions": 0
+  },
+  "scope": "CPU macOS ARM Python 3.12; no prueba universal de otros entornos."
+}

@@ -1,0 +1,21 @@
+{
+  "scope": "Análisis secundario exploratorio del test histórico; sin corrección por multiplicidad. No prueba prospectiva ni fundamento nuevo para elegir modelo.",
+  "seed": 20261023,
+  "repeats": 5000,
+  "contrast": "SVM 0.20 menos logística 0.125",
+  "delta_auc": 0.03186449205484032,
+  "delta_auc_ci95": [
+    0.019873380571045148,
+    0.04570038992075787
+  ],
+  "delta_f1": 0.20285888077858882,
+  "delta_f1_ci95": [
+    0.15106549756485824,
+    0.25333582105374175
+  ],
+  "mcnemar_discordant": [
+    54,
+    1
+  ],
+  "mcnemar_exact_p": 3.1086244689504383e-15
+}

@@ -6,6 +6,8 @@ Mi prioridad como Banquero Patrimonial Sr. es preparar revisiones que cuiden el 
 
 > **Decisión:** SVM calibrada, umbral **0.20**, como candidata académica por menor costo medio de validación cruzada. **La meta conjunta de recall ≥90 % y precisión ≥60 % no se alcanza.** Se requiere validación externa antes de un piloto operativo.
 
+> **Segunda revisión · 23 de octubre:** corregí una incompatibilidad de instalación de MLflow y reproduje el entrenamiento completo en un entorno nuevo. [Revisión y cotejo de rúbrica](documentos/Revision_2.md) · [Pruebas de reproducción](resultados/reproduccion_revision2.json) · [Auditoría](resultados/auditoria_revision2.json).
+
 ## Empieza aquí
 
 | Quiero… | Acceso directo |
@@ -46,6 +48,8 @@ Bajar el umbral reduce omisiones de **21 a 10**, pero aumenta falsas alertas de 
 - **Umbral:** rejilla 0.05–0.95, paso 0.025; minimiza costo bajo restricciones si son factibles. Si no, minimiza costo y registra la meta incumplida. Umbral final elegido con OOF de desarrollo, nunca optimizado en test.
 - **Incertidumbre:** bootstrap estratificado pareado de 2,000 repeticiones. IC95 % AUC SVM [0.9284, 0.9761]. McNemar de exactitud entre umbrales p=0.2649: no demuestra mejora de exactitud. Los folds no son observaciones independientes.
 
+La segunda revisión incorpora una **comparación exploratoria pareada entre algoritmos**: ΔAUC SVM−logística = 0.03186 (IC95 % [0.01987, 0.04570]) y ΔF1 = 0.20286 ([0.15107, 0.25334]). Es distinta del McNemar entre umbrales anterior. [Método, significancia y límites](documentos/Revision_2.md#comparación-estadística-adicional) · [Resultados completos](resultados/comparacion_pareada.json).
+
 ## A/B simulado y negocio
 
 ![A/B simulado](resultados/ab.png)
@@ -69,10 +73,15 @@ python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python fuentes/verificar.py
+python fuentes/auditoria.py
 python fuentes/experimento.py
 ```
 
 En Windows, activa con `.venv\Scripts\activate`. `experimento.py` vuelve a entrenar y actualiza `resultados/`; conserva una copia si quieres comparar con la entrega. `mlflow.db` y `mlartifacts/` son almacenes locales ignorados por Git.
+
+Para replicar el conjunto completo de versiones auditadas, usa `pip install -r requirements-lock.txt`. El archivo mínimo también fija SQLAlchemy 2.0.40: una resolución nueva con 2.1.6 impedía iniciar MLflow 2.22.2.
+
+La [segunda revisión](documentos/Revision_2.md) documenta la reproducción de métricas, predicciones y validación cruzada, y amplía la comparación estadística sin modificar la selección original.
 
 ### Abrir Streamlit
 

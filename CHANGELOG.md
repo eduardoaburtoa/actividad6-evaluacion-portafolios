@@ -1,5 +1,13 @@
 # Historial de la Actividad 6
 
+## 1.0.1 · 23 de octubre de 2026
+- Segunda revisión contra los cuatro criterios de la rúbrica; anexo `documentos/Revision_2.md`.
+- Corrige incompatibilidad MLflow/SQLAlchemy detectada en instalación limpia; añade bloqueo completo de versiones.
+- Reproduce entrenamiento y valida coincidencia de resultados; publica evidencia estructurada de la prueba.
+- Añade auditoría de datos, modelos, métricas, folds, MLflow y enlaces.
+- Agrega contraste pareado exploratorio SVM/logística; conserva resultados originales y sus límites.
+- Hace repetible la celda inicial de Colab y protege rutas con espacios al restaurar MLflow.
+
 ## 1.0.0 · 22 de octubre de 2026
 - Continúa la Actividad 5 (commit ffcab30094541ebbe7f52f1c55062068d59e1e4f).
 - Conserva los datos y su partición histórica; transforma la etiqueta a negativa / no negativa.

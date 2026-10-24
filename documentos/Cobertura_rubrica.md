@@ -18,3 +18,7 @@
 | Streamlit adicional | app.py | Probado localmente, no se afirma despliegue Cloud |
 
 Esta matriz documenta evidencias; la calificación corresponde al docente.
+
+## Segunda revisión · 23 de octubre de 2026
+
+[Cotejo explícito de los cuatro criterios de 25 %, correcciones y pruebas](Revision_2.md). Incluye comparación estadística adicional entre algoritmos y reproducción desde un entorno limpio.
