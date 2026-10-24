@@ -1,3 +1,5 @@
+> **Archivo histórico de la revisión 1.0.1.** La versión 1.1.0 integra las mejoras en el reporte de diez páginas; véase [verificación actual](Verificacion_110.md). Las referencias a ocho páginas y sus páginas corresponden al reporte anterior.
+
 # Segunda revisión de la Actividad 6
 
 **Eduardo Aburto Angulo · 23 de octubre de 2026**

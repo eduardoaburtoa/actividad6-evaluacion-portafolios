@@ -1,0 +1,33 @@
+{
+  "actualizaciones": [
+    [
+      "SVM 0.20 · Recall 83.61 % · Precisión 67.11 % · F1 0.7445",
+      "Conservo SVM 0.20: accuracy 0.9226; precisión 0.6711; recall 0.8361; F1 0.7445; AUC 0.9548. Son 76 revisiones entre 452 noticias. La meta conjunta no se alcanza. Clase positiva = noticia negativa; test histórico ya examinado en Actividad 5. No es una orden de inversión."
+    ],
+    [
+      "Matriz · TN 366 · FP 25 · FN 10 · TP 51",
+      "Umbral 0.20: TN 366, FP 25, FN 10, TP 51. Frente a 0.50, reduzco omisiones de 21 a 10 y elevo falsas alertas de 7 a 25. Costo didáctico por 100: 16.59 frente a 24.78; no son pesos. La matriz adjunta muestra ambos puntos de operación."
+    ],
+    [
+      "ROC · AUC SVM 0.9548 frente a logística 0.9229",
+      "ROC mide discriminación: AUC SVM 0.9548 frente a logística 0.9229. PR muestra precisión frente a recall con prevalencia 0.1350; AP SVM 0.8468 y logística 0.7329. Brier 0.0463 frente a 0.0740; indica calidad probabilística favorable, no calibración perfecta. Test retrospectivo; no acredita rentabilidad."
+    ],
+    [
+      "Umbral 0.20 · Omisiones 21→10 · Falsas alertas 7→25",
+      "La política 0.20 se fijó en desarrollo OOF por costo. Escenarios de test: 0.075 → recall 0.9016, precisión 0.4435, F1 0.5946, FN 6, FP 69, 124 revisiones y costo/100 21.90. 0.20 → 76 revisiones y costo/100 16.59. 0.50 → 47 revisiones y costo/100 24.78. La meta de recall aislada es alcanzable; la conjunta no se alcanza en la rejilla. No reselecciono mirando test."
+    ],
+    [
+      "A/B SIMULADO · 48/75 vs 59/75 · Fisher p=0.0703",
+      "A/B SIMULADO: 150 personajes, 75 por brazo; A=48/75, B=59/75, diferencia 14.67 puntos; Fisher bilateral p=0.0703. IC aproximado Wilson–Bonferroni [−8.73, 36.23]. Potencia normal aproximada 0.4911 bajo efecto supuesto de 13 puntos; MDE 17.84 puntos (17.9 hacia arriba). No significancia no demuestra ausencia de efecto ni permite atribuirla sólo a la muestra. CV evalúa predicción; un A/B real evaluaría intervención. No hay evidencia causal real."
+    ]
+  ],
+  "comparacion": "Comparo cinco folds externos (media ± desviación estándar):\n\nModelo | Accuracy | Precisión | Recall | F1 | AUC | Costo/100\nLogística | 0.8401 ± 0.0141 | 0.4465 ± 0.0270 | 0.8066 ± 0.1064 | 0.5731 ± 0.0428 | 0.9128 ± 0.0347 | 26.3905 ± 6.2561\nSVM calibrada | 0.9148 ± 0.0224 | 0.6477 ± 0.0758 | 0.8268 ± 0.0580 | 0.7242 ± 0.0585 | 0.9431 ± 0.0313 | 17.8156 ± 4.5212\n\nSelecciono SVM por menor costo medio CV. ΔAUC en test SVM−logística = 0.0319, IC95 % [0.0206, 0.0451], bootstrap pareado 2,000, semilla 20261022. McNemar entre modelos: 54 frente a 1, p≈3.1×10⁻¹⁵.\n\nTest retrospectivo ya examinado en Actividad 5; análisis exploratorio, sin corrección por multiplicidad ni prueba externa prospectiva. No demuestra rendimiento financiero. Fuente: resultados/ampliacion.json y validacion_cruzada.csv en GitHub.",
+  "leyenda": "Verde · Evidencia verificada: cálculos reproducibles y resultados comprobados; no significa autorización de uso productivo.\n\nAmarillo · Supuesto didáctico: A/B simulado, clientes ficticios y escenarios de costos; no observaciones reales.\n\nRojo · Meta pendiente o deuda técnica: recall y precisión conjuntos incumplidos, validación externa y controles pendientes.\n\nLectura sugerida: contexto → métricas y curvas → validación y comparación → modelo elegido y límites. Las imágenes son resultados reales del repositorio. La checklist distingue evidencia documentada de validación prospectiva todavía pendiente.\n\nLa IA no sustituye el criterio del banquero; lo aumenta. Una noticia negativa no es una orden de inversión.",
+  "checklist": [
+    "Menor costo medio en CV anidada: 17.8156 frente a 26.3905",
+    "ΔAUC 0.0319 con IC95 % [0.0206, 0.0451] que excluye cero",
+    "Brier SVM 0.0463: evidencia favorable, no calibración perfecta",
+    "Meta conjunta no alcanzada: recall 0.8361 y precisión 0.6711",
+    "Pendiente: validación externa prospectiva en español antes de piloto"
+  ]
+}

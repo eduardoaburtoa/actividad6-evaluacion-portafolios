@@ -19,16 +19,16 @@ Fecha: 24 de octubre de 2026. Los estados distinguen archivos terminados de acci
 | A13 Extensión | resuelto | Diez páginas totales: portada, declaración y ocho de contenido; revisión visual de todas las páginas. |
 | A14 Identidad y declaración | resuelto | Plantilla azul, logotipo, matrícula, docente, fecha original; declaración de Codex y Claude. |
 | B Cuaderno ejecutado | resuelto | fuentes/entrena.ipynb: 14 celdas de código ejecutadas, sin salidas de error; modelos, CV, umbrales, A/B y MLflow visibles. Ejecución local, no sesión Colab comprobada. |
-| C1 Imágenes en Trello | parcial | Matriz y métricas cargadas; quedan adjuntos de otras tarjetas. |
-| C2 Comparación en Trello | parcial | Texto y figuras preparados; publicación de tarjeta pendiente. |
-| C3 Etiquetas y leyenda | parcial | Pendiente de publicación en Trello. |
-| C4 Checklist de decisión | parcial | Pendiente de actualización en Trello. |
-| C5 Público y capturas | parcial | Cambio público rechazado por revisión automática; confirmación directa solicitada. El PDF anterior se conserva hasta regenerar evidencia. |
+| C1 Imágenes en Trello | resuelto | Matriz, métricas, ROC/PR, comparación, umbral y A/B adjuntos; portadas verificadas. |
+| C2 Comparación en Trello | resuelto | Nueva tarjeta publicada con CV, ΔAUC y dos gráficas. |
+| C3 Etiquetas y leyenda | resuelto | Verde, amarillo y rojo con tarjeta de leyenda publicada. |
+| C4 Checklist de decisión | resuelto | Cinco criterios: cuatro documentados y validación externa pendiente. |
+| C5 Público y capturas | parcial | PDF regenerado con capturas reales. Trello conserva acceso del espacio de trabajo; cambio público pendiente de confirmación directa tras rechazo automático. |
 | D1 Pruebas | resuelto | pruebas/test_app.py y pruebas/test_metricas.py; siete pruebas pasaron localmente. |
-| D2 CI | parcial | .github/workflows/validacion.yml y badge listos; ejecución remota pendiente de confirmar. |
+| D2 CI | resuelto | GitHub Actions en Ubuntu: run 40104739285 completado con éxito; resultados/ci_110.json. |
 | D3 Google Docs | resuelto | Nueva versión importada, acceso restringido indicado explícitamente en README; no se afirma acceso anónimo. |
 | D4 Aviso | resuelto | AVISO.md. |
-| D5 About y topics | parcial | Descripción existente; topics pendientes de editar. |
+| D5 About y topics | resuelto | Descripción y siete topics publicados y comprobados. |
 | D6 README | resuelto | Nuevos resultados y escenarios; auditoría Linux atribuida al autor, sin afirmar comprobación propia sin logs. |
 | D7 CHANGELOG | resuelto | Versión 1.1.0. |
 | D8 Figuras versionadas | resuelto | Todas bajo resultados/. |

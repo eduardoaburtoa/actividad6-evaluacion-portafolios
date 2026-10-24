@@ -10,7 +10,7 @@ Mi prioridad como Banquero Patrimonial Sr. es preparar revisiones que cuiden el 
 
 [![Validación reproducible](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/workflows/validacion.yml/badge.svg)](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/workflows/validacion.yml)
 
-**Versión 1.1.0:** reporte integrado con ocho páginas de contenido más portada y declaración; cuaderno ejecutado con código y salidas visibles; curvas PR y fiabilidad; pruebas automatizadas. [Verificación de mejoras](documentos/Verificacion_110.md).
+**Versión 1.1.0:** reporte integrado con ocho páginas de contenido más portada y declaración; cuaderno ejecutado con código y salidas visibles; curvas PR y fiabilidad; pruebas automatizadas. [Verificación de mejoras](documentos/Verificacion_110.md) · [Textos de Trello](tablero/Tarjetas_110.md) · [Código completo de la revisión](documentos/Codigo_110.md).
 
 ## Empieza aquí
 
@@ -150,7 +150,7 @@ Actividad6 (raíz del repositorio)
 
 - [Actividad 4 · motor-senales-nlp](https://github.com/eduardoaburtoa/motor-senales-nlp).
 - [Actividad 5 · MLflow](https://github.com/eduardoaburtoa/actividad5-mlflow-portafolios), base `ffcab30094541ebbe7f52f1c55062068d59e1e4f`.
-- [Financial PhraseBank · revisión fijada](https://huggingface.co/datasets/takala/financial_phrasebank/tree/8d3fe0c36d5feec6b3cc5e455b0fcb4820fb9964). Malo, Sinha, Takala, Ahlgren y Lappalainen. Licencia **CC BY-NC-SA 3.0**, conservada en datos; no se otorga permiso comercial adicional.
+- [Financial PhraseBank · revisión fijada](https://huggingface.co/datasets/takala/financial_phrasebank/tree/8d3fe0c36d5feec6b3cc5e455b0fcb4820fb9964). Fuente del artículo: Malo, Sinha, Korhonen, Wallenius y Takala (2014); copia del dataset mantenida por Takala. Licencia **CC BY-NC-SA 3.0**, conservada en datos; no se otorga permiso comercial adicional.
 - [Ajuste de umbral · scikit-learn](https://scikit-learn.org/stable/auto_examples/model_selection/plot_tuned_decision_threshold.html).
 - [Calibración · scikit-learn](https://scikit-learn.org/stable/modules/generated/sklearn.calibration.CalibratedClassifierCV.html).
 - [Fisher exacto · SciPy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.fisher_exact.html).
@@ -172,6 +172,6 @@ python -m fuentes.ampliacion
 
 Para reentrenar con la configuración original: `python fuentes/experimento.py`. Para leer ejecución y salidas guardadas abre [entrena.ipynb](fuentes/entrena.ipynb); sus 14 celdas de código fueron ejecutadas localmente. La sesión de Google Colab no se ejecutó aquí.
 
-[Pruebas de esta iteración](resultados/verificacion_110.json). La reproducción propia comprobada es macOS ARM con Python 3.12.14; la auditoría externa comunicada por el autor refiere resultados idénticos en Linux con Python 3.13, scikit-learn 1.9.1 y MLflow 3.17.2. Sin logs adjuntos no se presenta como verificación independiente de esta revisión. El CI prueba métricas y aplicación en Ubuntu; no reentrena ni acredita esas versiones externas.
+[Pruebas de esta iteración](resultados/verificacion_110.json). [Validación aprobada en GitHub Actions](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/runs/40104739285), con [registro verificable](resultados/ci_110.json). La reproducción propia comprobada es macOS ARM con Python 3.12.14; la auditoría externa comunicada por el autor refiere resultados idénticos en Linux con Python 3.13, scikit-learn 1.9.1 y MLflow 3.17.2. Sin logs adjuntos no se presenta como verificación independiente de esta revisión. El CI prueba métricas y aplicación en Ubuntu; no reentrena ni acredita esas versiones externas.
 
 [Referencias académicas](documentos/Referencias.md) · [Aviso de derechos y alcance](AVISO.md).
