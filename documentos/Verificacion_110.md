@@ -23,7 +23,7 @@ Fecha: 24 de octubre de 2026. Los estados distinguen archivos terminados de acci
 | C2 Comparación en Trello | resuelto | Nueva tarjeta publicada con CV, ΔAUC y dos gráficas. |
 | C3 Etiquetas y leyenda | resuelto | Verde, amarillo y rojo con tarjeta de leyenda publicada. |
 | C4 Checklist de decisión | resuelto | Cinco criterios: cuatro documentados y validación externa pendiente. |
-| C5 Público y capturas | parcial | PDF regenerado con capturas reales. Trello conserva acceso del espacio de trabajo; cambio público pendiente de confirmación directa tras rechazo automático. |
+| C5 Público y capturas | resuelto | Tablero público autorizado por el autor y verificado sin sesión el 24 de octubre de 2026; evidencias/trello_publico110.png. PDF de capturas disponible. |
 | D1 Pruebas | resuelto | pruebas/test_app.py y pruebas/test_metricas.py; siete pruebas pasaron localmente. |
 | D2 CI | resuelto | GitHub Actions en Ubuntu: run 40104739285 completado con éxito; resultados/ci_110.json. |
 | D3 Google Docs | resuelto | Nueva versión importada, acceso restringido indicado explícitamente en README; no se afirma acceso anónimo. |

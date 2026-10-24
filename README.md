@@ -25,7 +25,7 @@ Mi prioridad como Banquero Patrimonial Sr. es preparar revisiones que cuiden el 
 | Consultar cifras exactas | [Métricas](resultados/metricas_test.csv) · [Predicciones](resultados/predicciones_test.csv) · [Folds](resultados/validacion_cruzada.csv) |
 | Comprobar cobertura de la rúbrica | [Matriz de cumplimiento](documentos/Cobertura_rubrica.md) |
 
-Google Docs y Trello conservan acceso de la cuenta o espacio de trabajo; el PDF y Word del repositorio permiten evaluar sin solicitar acceso. Streamlit está incluido como aplicación ejecutable; este repositorio por sí solo **no implica alojamiento en Streamlit Cloud**.
+Trello es público: verificado sin iniciar sesión el 24 de octubre de 2026. Google Docs conserva acceso restringido al propietario; el PDF y Word del repositorio permiten evaluar sin solicitar acceso. Streamlit está incluido como aplicación ejecutable; este repositorio por sí solo **no implica alojamiento en Streamlit Cloud**.
 
 ## Resultado en primera vista
 

@@ -4,4 +4,6 @@
 
 Tres listas y 18 tarjetas. Incluye gráficas como portadas, comparación de modelos, leyenda de etiquetas y checklist de decisión. La validación externa permanece pendiente.
 
-El tablero conserva visibilidad del espacio de trabajo. Las capturas públicas en este repositorio permiten evaluar su contenido sin una cuenta de Trello. El cambio a público está pendiente de confirmación directa tras un rechazo de revisión automática.
+El tablero es público desde el 24 de octubre de 2026, tras autorización explícita del autor. Se verificaron las 18 tarjetas desde un navegador sin sesión (con la opción «Iniciar sesión» visible). Sólo sus miembros pueden editarlo. [Captura de acceso público](../evidencias/trello_publico110.png).
+
+El PDF conserva las capturas anteriores al cambio de visibilidad; la captura enlazada arriba documenta el estado público actual.
