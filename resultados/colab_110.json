@@ -1,0 +1,38 @@
+{
+  "fecha": "2026-10-25",
+  "entorno": "Google Colab CPU",
+  "python": "3.13.16",
+  "celdas_codigo": 14,
+  "celdas_ejecutadas": 14,
+  "execution_counts": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "errores": 0,
+  "alcance_errores": "Ejecución completa posterior a corregir instalación y reiniciar; el primer intento falló con AttributeError en runtime.restart_runtime.",
+  "reinicio_real_comprobado": true,
+  "continuacion_automatica_sin_intervencion": false,
+  "intervencion": "Se pulsó Ejecutar todo después de reconectar. La continuación automática queda pendiente.",
+  "sha256_descarga": "e4e3b4da5b9d288c92d1eccfcf82c49877a8a78c0999bb62107d62cfa2519f2a",
+  "evidencia_descarga": "evidencias/colab_ejecutado111.zip",
+  "captura": "evidencias/colab_110.png",
+  "salidas_originales_conservadas": true,
+  "nota_metadata": "La descarga conserva metadatos execution históricos del cuaderno; no se usan como fecha de la nueva ejecución. La nueva sesión se identifica por Python, salidas e IDs MLflow.",
+  "mlflow_run_ids": [
+    "89c68e0b30d6484a89e463af35619151",
+    "6d6c178adf2748358f66e4ff43423ad9",
+    "0cee9749cc8c4193b21211eaf91aa41d"
+  ]
+}

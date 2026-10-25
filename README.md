@@ -10,14 +10,16 @@ Mi prioridad como Banquero Patrimonial Sr. es preparar revisiones que cuiden el 
 
 [![Validación reproducible](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/workflows/validacion.yml/badge.svg)](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/workflows/validacion.yml)
 
-**Versión 1.1.0:** reporte integrado con ocho páginas de contenido más portada y declaración; cuaderno ejecutado con código y salidas visibles; curvas PR y fiabilidad; pruebas automatizadas. [Verificación de mejoras](documentos/Verificacion_110.md) · [Textos de Trello](tablero/Tarjetas_110.md) · [Código completo de la revisión](documentos/Codigo_110.md).
+**Cierre 1.1.1:** [Estado de las seis tareas y evidencias](documentos/Verificacion_111.md). Conservé el reporte 1.1.0 y todas las cifras.
+
+**Contenido 1.1.0:** reporte integrado con ocho páginas de contenido más portada y declaración; cuaderno ejecutado con código y salidas visibles; curvas PR y fiabilidad; pruebas automatizadas. [Verificación de mejoras](documentos/Verificacion_110.md) · [Textos de Trello](tablero/Tarjetas_110.md) · [Código completo de la revisión](documentos/Codigo_110.md).
 
 ## Empieza aquí
 
 | Quiero… | Acceso directo |
 |---|---|
 | Leer la entrega integrada de diez páginas | [Reporte PDF](documentos/Actividad6_Eduardo_Aburto.pdf) · [Word](documentos/Actividad6_Eduardo_Aburto.docx) |
-| Editar el reporte en Google | [Google Docs 1.1.0 · acceso restringido al propietario](https://docs.google.com/document/d/1_dCmO0TBiL1HvV-EilfEwqv0tQQo1tv0OxPz-L4A8c8/edit) |
+| Comentar el reporte en Google | [Google Docs 1.1.0 · comentar con el enlace](https://docs.google.com/document/d/1_dCmO0TBiL1HvV-EilfEwqv0tQQo1tv0OxPz-L4A8c8/edit) |
 | Revisar el tablero solicitado | [Trello](https://trello.com/b/2TN8TJQ1) · [Capturas en PDF sin necesidad de acceso a Trello](tablero/Evidencia_Trello.pdf) |
 | Explorar resultados y costos | [Aplicación Streamlit](app.py) · [Cómo abrirla](#abrir-streamlit) |
 | Ejecutar en Google Colab | [Abrir notebook](https://colab.research.google.com/github/eduardoaburtoa/actividad6-evaluacion-portafolios/blob/main/fuentes/entrena.ipynb) |
@@ -25,7 +27,7 @@ Mi prioridad como Banquero Patrimonial Sr. es preparar revisiones que cuiden el 
 | Consultar cifras exactas | [Métricas](resultados/metricas_test.csv) · [Predicciones](resultados/predicciones_test.csv) · [Folds](resultados/validacion_cruzada.csv) |
 | Comprobar cobertura de la rúbrica | [Matriz de cumplimiento](documentos/Cobertura_rubrica.md) |
 
-Trello es público: verificado sin iniciar sesión el 24 de octubre de 2026. Google Docs conserva acceso restringido al propietario; el PDF y Word del repositorio permiten evaluar sin solicitar acceso. Streamlit está incluido como aplicación ejecutable; este repositorio por sí solo **no implica alojamiento en Streamlit Cloud**.
+Trello es público: verificado sin iniciar sesión el 24 de octubre de 2026. Google Docs permite comentar a cualquier persona con el enlace; comprobé su acceso en incógnito el 25 de octubre de 2026. Conservo la edición como propietario. El PDF y Word también permiten evaluar sin solicitar acceso. Streamlit está incluido como aplicación ejecutable; este repositorio por sí solo **no implica alojamiento en Streamlit Cloud**.
 
 ## Resultado en primera vista
 
@@ -160,7 +162,7 @@ Actividad6 (raíz del repositorio)
 
 Trabajo académico personal. Identidad Vértice AI y paleta azul solicitada; no constituye un producto oficial ni una recomendación institucional de BBVA.
 
-## Comprobar la versión 1.1.0
+## Comprobar el cierre 1.1.1
 
 ```bash
 pip install -r requirements-dev.txt
@@ -170,7 +172,7 @@ python -m pytest pruebas -q
 python -m fuentes.ampliacion
 ```
 
-Para reentrenar con la configuración original: `python fuentes/experimento.py`. Para leer ejecución y salidas guardadas abre [entrena.ipynb](fuentes/entrena.ipynb); sus 14 celdas de código fueron ejecutadas localmente. La sesión de Google Colab no se ejecutó aquí.
+Para reentrenar con la configuración original: `python fuentes/experimento.py`. Para leer ejecución y salidas guardadas abre [entrena.ipynb](fuentes/entrena.ipynb); conservé sus 14 salidas originales. También ejecuté las 14 celdas en Google Colab con Python 3.13.16 y cero errores en la ejecución final: [registro](resultados/colab_110.json), [captura](evidencias/colab_110.png) y [descarga de evidencia](evidencias/colab_ejecutado111.zip). Corregí únicamente la celda de instalación. **Si se requiere reinicio, al reconectar hay que pulsar «Ejecutar todo» de nuevo; la continuación automática sin intervención queda pendiente.**
 
 [Pruebas de esta iteración](resultados/verificacion_110.json). [Validación aprobada en GitHub Actions](https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios/actions/runs/40104739285), con [registro verificable](resultados/ci_110.json). La reproducción propia comprobada es macOS ARM con Python 3.12.14; la auditoría externa comunicada por el autor refiere resultados idénticos en Linux con Python 3.13, scikit-learn 1.9.1 y MLflow 3.17.2. Sin logs adjuntos no se presenta como verificación independiente de esta revisión. El CI prueba métricas y aplicación en Ubuntu; no reentrena ni acredita esas versiones externas.
 

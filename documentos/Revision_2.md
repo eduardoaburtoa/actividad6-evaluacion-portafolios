@@ -49,6 +49,8 @@ python fuentes/comparacion_pareada.py
 
 Streamlit se probó al iniciar y al cambiar el umbral, el monto de migración y el horizonte. La aplicación permanece ejecutable localmente; no se afirma que tenga un despliegue activo en Streamlit Cloud. Trello conserva visibilidad del espacio de trabajo; las capturas PDF permiten revisar el tablero sin acceso a la cuenta.
 
+**Actualización del 24 de octubre de 2026:** el tablero pasó a visibilidad pública y se verificó sin sesión; ver [tablero/README.md](../tablero/README.md) y [evidencias/trello_publico110.png](../evidencias/trello_publico110.png).
+
 ## Límites que siguen vigentes
 
 Recall de 83.6 % frente a meta de 90 %; corpus inglés histórico y licencia no comercial; A/B simulado, sin clientes reales; gastos y corretaje sujetos a los supuestos descritos. El siguiente paso de investigación es una validación temporal en español y un piloto supervisado, una vez resueltos datos, permisos y capacidad operativa.

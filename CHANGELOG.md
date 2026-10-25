@@ -1,5 +1,14 @@
 # Historial de la Actividad 6
 
+## 1.1.1 · 25 de octubre de 2026
+- Corrige el pie público de Trello y añade actualización histórica fechada; conserva las cuatro capturas.
+- Actualiza cobertura de rúbrica y coteja las páginas 3–10 del reporte existente.
+- Corrige sólo el instalador del notebook: reemplaza una llamada de reinicio inexistente y detecta versiones cargadas distintas; conserva todas sus salidas originales.
+- Ejecuta las 14 celdas en Colab, Python 3.13.16, sin errores finales; publica captura, registro y descarga. Tras el reinicio fue necesario pulsar Ejecutar todo: continuación automática pendiente.
+- Documenta siete topics existentes sin cambiarlos y Google Docs con permiso de comentar por enlace, comprobado en incógnito; actualiza Entrega en Trello.
+- Conserva las siete pruebas y el workflow. No aplica endurecimiento opcional porque la continuación automática sigue pendiente.
+- No modifica el reporte, experimento original, semillas, partición, cifras ni advertencias.
+
 ## 1.1.0 · 24 de octubre de 2026
 - Integra resumen ejecutivo, SMART de cinco filas, escenarios, referencias y cobertura de rúbrica en el reporte.
 - Añade PR, fiabilidad, Brier, ΔAUC pareado, McNemar entre modelos y potencia normal aproximada del A/B simulado.

@@ -18,7 +18,7 @@ Fecha: 24 de octubre de 2026. Los estados distinguen archivos terminados de acci
 | A12 Voz personal | resuelto | Conclusión en primera persona, «ánimo», contexto bancario. |
 | A13 Extensión | resuelto | Diez páginas totales: portada, declaración y ocho de contenido; revisión visual de todas las páginas. |
 | A14 Identidad y declaración | resuelto | Plantilla azul, logotipo, matrícula, docente, fecha original; declaración de Codex y Claude. |
-| B Cuaderno ejecutado | resuelto | fuentes/entrena.ipynb: 14 celdas de código ejecutadas, sin salidas de error; modelos, CV, umbrales, A/B y MLflow visibles. Ejecución local, no sesión Colab comprobada. |
+| B Cuaderno ejecutado | resuelto | fuentes/entrena.ipynb: 14 celdas de código ejecutadas, sin salidas de error; modelos, CV, umbrales, A/B y MLflow visibles. Sesión Colab comprobada el 25 de octubre: 14 celdas y cero errores finales; [evidencia](../resultados/colab_110.json). Pendiente la continuación automática tras reinicio: fue necesario volver a pulsar Ejecutar todo. |
 | C1 Imágenes en Trello | resuelto | Matriz, métricas, ROC/PR, comparación, umbral y A/B adjuntos; portadas verificadas. |
 | C2 Comparación en Trello | resuelto | Nueva tarjeta publicada con CV, ΔAUC y dos gráficas. |
 | C3 Etiquetas y leyenda | resuelto | Verde, amarillo y rojo con tarjeta de leyenda publicada. |
@@ -26,11 +26,11 @@ Fecha: 24 de octubre de 2026. Los estados distinguen archivos terminados de acci
 | C5 Público y capturas | resuelto | Tablero público autorizado por el autor y verificado sin sesión el 24 de octubre de 2026; evidencias/trello_publico110.png. PDF de capturas disponible. |
 | D1 Pruebas | resuelto | pruebas/test_app.py y pruebas/test_metricas.py; siete pruebas pasaron localmente. |
 | D2 CI | resuelto | GitHub Actions en Ubuntu: run 40104739285 completado con éxito; resultados/ci_110.json. |
-| D3 Google Docs | resuelto | Nueva versión importada, acceso restringido indicado explícitamente en README; no se afirma acceso anónimo. |
+| D3 Google Docs | resuelto | Versión 1.1.0 con permiso de comentar para cualquiera con enlace; acceso comprobado en incógnito el 25 de octubre. Capturas: evidencias/google_docs_permiso111.png y google_docs_incognito111.png. |
 | D4 Aviso | resuelto | AVISO.md. |
-| D5 About y topics | resuelto | Descripción y siete topics publicados y comprobados. |
+| D5 About y topics | resuelto | Descripción y siete topics publicados y comprobados; captura evidencias/topics_111.png. |
 | D6 README | resuelto | Nuevos resultados y escenarios; auditoría Linux atribuida al autor, sin afirmar comprobación propia sin logs. |
-| D7 CHANGELOG | resuelto | Versión 1.1.0. |
+| D7 CHANGELOG | resuelto | Versión 1.1.1: cierre documental, con pendiente de continuación automática explícito. |
 | D8 Figuras versionadas | resuelto | Todas bajo resultados/. |
 
 ## Integridad

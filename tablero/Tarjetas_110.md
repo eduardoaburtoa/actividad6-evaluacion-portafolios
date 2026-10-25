@@ -70,6 +70,6 @@ La IA no sustituye el criterio del banquero; lo aumenta. Una noticia negativa no
 
 ## Entrega
 
-Reporte versión 1.1.0: diez páginas totales, ocho de contenido. Google Docs editable para el propietario, acceso restringido: https://docs.google.com/document/d/1_dCmO0TBiL1HvV-EilfEwqv0tQQo1tv0OxPz-L4A8c8/edit
+Reporte versión 1.1.0: diez páginas totales, ocho de contenido. Google Docs editable para el propietario; cualquier persona con el enlace puede comentar. Acceso comprobado en incógnito el 25 de octubre de 2026: https://docs.google.com/document/d/1_dCmO0TBiL1HvV-EilfEwqv0tQQo1tv0OxPz-L4A8c8/edit
 
 PDF, Word, cuaderno ejecutado y evidencias: https://github.com/eduardoaburtoa/actividad6-evaluacion-portafolios

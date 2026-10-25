@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-10-25",
+  "python": "3.12.14",
+  "verificar_exit_code": 0,
+  "auditoria_comprobaciones": 81,
+  "auditoria_exit_code": 0,
+  "pytest_passed": 7,
+  "pytest_seconds": 1.25,
+  "pytest_exit_code": 0,
+  "experimento_sha256": "4084da16ebe2f67af618f78beab450d040aa968c418ce7d37e759fbe9d95a32f",
+  "notebook_salidas_originales_identicas": true,
+  "notebook_unica_celda_cambiada": 1,
+  "reporte_pdf_y_word_sin_cambios": true,
+  "ci": "Workflow existente sin cambios; consultar Actions para estado del commit publicado."
+}
